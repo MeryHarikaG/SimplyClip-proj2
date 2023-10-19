@@ -210,7 +210,7 @@ function addClipboardListItem(text) {
 
     if (imageUrl.length > 0) {
         console.log("IMage Url found")
-        imagePopup.src = './images/url2.png';
+        imagePopup.src = './images/url_icon.png';
         if (!isVideo) {
             imagePopup.style.width = '32px'
             imagePopup.style.height = '32px';
