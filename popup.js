@@ -201,16 +201,17 @@ function addClipboardListItem(text) {
     let listText = document.createTextNode(text);
     listPara.setAttribute("data-toggle", "tooltip");
     listPara.setAttribute("data-placement", "bottom");
-    listPara.setAttribute("title", "Click to copy the below text:\n" + text + "\n" + "Word count:\n"+text.split(' ').length);
+    listPara.setAttribute("title", "Click to copy the below text:\n" + text);
     listPara.classList.add("data");
     listItem.classList.add("listitem");
     let popupLink = document.createElement('a');
     let imagePopup = document.createElement('img');
+    
     prevText = text;
 
     if (imageUrl.length > 0) {
         console.log("IMage Url found")
-        imagePopup.src = imageUrl;
+        imagePopup.src = './images/url2.png';
         if (!isVideo) {
             imagePopup.style.width = '32px'
             imagePopup.style.height = '32px';
@@ -604,7 +605,7 @@ function searchClipboardText() {
 }
 
 
-var enabled = true;
+var enabled = false;
 var myButton = document.getElementById('toggle-button');
 
 chrome.storage.local.get('enabled', data => {
